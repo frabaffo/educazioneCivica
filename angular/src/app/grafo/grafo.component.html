@@ -1,0 +1,7 @@
+<select [(ngModel)]="selectedOption">
+        <option *ngFor="let o of options1">
+            {{o.name}}
+        </option>
+</select>
+<button (click)="submit()" type="button" class="btn btn-primary ml-2">Search</button><br><br>
+<google-chart *ngIf="chartData.length>0" [options]="options" [type]="chartType" [data]="chartData" [width]="width" [height]="height"></google-chart>
