@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
   constructor(private http: HttpClient) { }
 
-  baseUrl = 'https://3000-f29b5eed-8bb1-4649-92ac-4d2cbb241d9d.ws-eu03.gitpod.io/blocco/Denutrizione/';
+  baseUrl = 'https://3000-e06f7788-e642-495d-9008-eb07bfe6bbb8.ws-eu03.gitpod.io/denutrizione/';
+  baseUrl1 = 'https://3000-e06f7788-e642-495d-9008-eb07bfe6bbb8.ws-eu03.gitpod.io/blocco/';
 
   getDenutrizione(name: string) {
     const url = `${this.baseUrl}${name}`;
@@ -16,5 +17,17 @@ export class ApiService {
     return obsTracks;
   }
 
+  getBlocco(name: string) {
+    const url = `${this.baseUrl1}${name}`;
+    let obsTracks = this.http.get(url);
+    console.log(obsTracks);
+    return obsTracks;
+  }
+  getInsicurezza() {
+    const url = `https://3000-e06f7788-e642-495d-9008-eb07bfe6bbb8.ws-eu03.gitpod.io/insicurezza`;
+    let obsTracks = this.http.get(url);
+    console.log(obsTracks);
+    return obsTracks;
+  }
 }
 

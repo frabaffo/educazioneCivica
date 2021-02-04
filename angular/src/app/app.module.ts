@@ -8,12 +8,16 @@ import { AppComponent } from './app.component';
 import { GrafoComponent } from './grafo/grafo.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { GrafoBloccoComponent } from './grafo-blocco/grafo-blocco.component';
+import { GrafoInsicurezzaComponent } from './grafo-insicurezza/grafo-insicurezza.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GrafoComponent,
-    HomeComponent
+    HomeComponent,
+    GrafoBloccoComponent,
+    GrafoInsicurezzaComponent
   ],
   imports: [
     BrowserModule,
